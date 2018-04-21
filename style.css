@@ -1,0 +1,21 @@
+.page-header{
+	text-align: center;
+	height: 225px;
+	background-color: #00b0ff;
+}
+
+.title{
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Life Savers', cursive;
+}
+
+.inputs{
+	margin-top: 20px;
+}
+
+.btn{
+	background-color: #00b0ff;
+}
+
