@@ -15,6 +15,9 @@ document.getElementById("name-submit").addEventListener("click", function(){
 		activePlayers.push(playerName);
 		console.log(activePlayers);
 		document.getElementById("player-name").value = "";
+
+		document.getElementById("teams").innerHTML = "";
+		document.getElementById("teams").innerHTML = activePlayers;
 	}
 })
 
@@ -25,24 +28,32 @@ document.getElementById("reset-button").addEventListener("click", function(){
 	activePlayers = [];
 	assignedPlayers = [];
 	numTeams = 0;
+	document.getElementById("teams").innerHTML = "";
 })
 
 
 // Form Teams Button
 
 document.getElementById("team-maker").addEventListener("click", function(){
+	var teamDisplay = document.getElementById("teams");
+	teamDisplay.innerHTML = "";
+
 	assignedPlayers = [];
 	numTeams = document.getElementById("number-of-teams").value;
 	var playersPerTeam = Math.floor(activePlayers.length / numTeams);
 	
-	
 	for(i=0; i<numTeams; i++){
-		
 
 		for(j=0; j<playersPerTeam; j++){
 			assignPlayer();
 		}
-		console.log("Team " + (i+1) + ": " + currentTeam);
+		// teamDisplay.append("Team " + (i+1) + ": " + currentTeam);
+
+		var node = document.createElement("p");
+		var textnode = document.createTextNode("Team " + (i+1) + ": " + currentTeam);
+		node.appendChild(textnode);
+		teamDisplay.appendChild(node);
+		
 		currentTeam = [];
 
 	}

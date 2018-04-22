@@ -18,26 +18,18 @@
         <h1 class="center title">Game Night</h1>
       </header>
 
-      <div class="row inputs valign-wrapper">
-        <div class="input-field col add-player">
+      <div class="row main-content">
+        <div class="input-field col s3 add-player">
           <input id="player-name" type="text" class="validate">
           <label for="player-name">Player Name</label>
-          <a class="waves-effect waves-light btn" id="name-submit">Add Player</a>
+          <p class="waves-effect waves-light btn" id="name-submit">Add Player</p>
         </div>
-      </div>
-
-   <!--    <div class="row">
-        <div class="col s2 offset-s5 button-holder">
-          <a class="waves-effect waves-light btn" id="name-submit">Add Player</a>
+        <div class="col s9" id="teams">
         </div>
-      </div> -->
-  <!--       <div class="col">
-          <a class="waves-effect waves-light btn" id="reset-button">Reset</a>
-        </div> -->
       </div>
 
       <div class="row">
-       <div class="input-field col s2">
+        <div class="col s3 input-field">
           <select id="number-of-teams">
             <option value="" disabled selected>Select # Of Teams</option>
             <option value="1">1</option>
@@ -52,16 +44,21 @@
             <option value="10">10</option>
           </select>
           <label># Of Teams</label>
+          <p class="waves-effect waves-light btn" id="team-maker">Form Teams</p>
+          
         </div>
-        <a class="waves-effect waves-light btn" id="team-maker">Form Teams</a>
-        <!-- <div>
-          <a class="waves-effect waves-light btn" id="team-maker">Form Teams</a>
-        </div> -->
+        <div class="col s9">
+        </div>
       </div>
-
       <div class="row">
-        <a class="waves-effect waves-light btn" id="reset-button">Reset</a>
+        <div class="col s1"></div>
+        <div class="col s10">
+          <p class="waves-effect waves-light" id="reset-button">Reset</p>
+        </div>
+        <div class="col s1"></div>
       </div>
+     
+
 
       <!--JS Files-->
       <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
